@@ -1,0 +1,10 @@
+{
+   "type": "record",
+   "namespace": "dbpedia",
+   "name": "DBpedia",
+	"doc":"DBpedia schema",
+	"fields": [
+		{"name": "label", "type": ["null", "string"]},
+		{"name": "category", "type":["null", {"type":"array", "items":"string"}]}
+	]
+} 
