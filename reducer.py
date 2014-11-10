@@ -12,7 +12,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 # data types in AVRO schema
-AVRO = {'article':'string', 'type':'string', 'category':'array', 'template':'array', 'disambiguates':'array', 'property':'array'}
+AVRO = {'article':'string', 'type':'array', 'category':'array', 'template':'array', 'disambiguates':'array', 'property':'array'}
 
 # preparing data types for AVRO
 def AVRO_output(inp):
