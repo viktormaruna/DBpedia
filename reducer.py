@@ -26,7 +26,7 @@ def AVRO_output(inp):
 		if AVRO[i] == 'string':
 			out[i] = ''.join(out[i])	
 
-	return json.dumps(dict(out), sort_keys=True) #  output JSON
+	return json.dumps(dict(out), sort_keys=True) #  output JSON with sorted keys
 
 ###############################################################################
 def main():
@@ -37,8 +37,8 @@ def main():
 
 	try:
 		for line in sys.stdin:  
-			line = line.strip()
-			key, value = line.split('\t', 1) # get key, value
+			line = line.strip() 
+			key, value = line.split('\t', 1) # line split: get key, value
 
 			# first iteraton			
 			if not prev_key:
@@ -60,7 +60,7 @@ def main():
 			print AVRO_output(data) # output
 
 	except Exception, err:
-		sys.stderr.write('Reducer ERROR (%s): %s\n' % (key, str(err)))
+		sys.stderr.write('Reducer ERROR (%s): %s\n' % (key, str(err))) # error
 
 if __name__ == '__main__':
     main()
