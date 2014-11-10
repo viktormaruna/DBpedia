@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# DBpedia Reducer
+# DBpedia EN Reducer
 # VI: Viktor Maruna
 
 import sys
 from collections import defaultdict
 import json
 
+# encoding
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
