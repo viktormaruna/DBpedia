@@ -8,6 +8,7 @@ import sys
 import rdflib
 import StringIO
 
+# encoding
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -78,7 +79,7 @@ def main():
 						print  '%s\t%s' % (stmt_key, stmt_value) # mapper output
 
 		except Exception, err:
-			sys.stderr.write('Mapper ERROR: %s\n' % str(err))
+			sys.stderr.write('Mapper ERROR: %s\n' % str(err)) # error
 
 if __name__ == '__main__':
     main()
